@@ -48,7 +48,11 @@ export default function Courses(props) {
 
 	const returnActionButton = (item) => {
 		let items = Object.keys(item).map((action, idx) => (
-			<a className="link2" onClick={(e) => handleClick(e, item[action])} key={idx}>
+			<a
+				className="link2"
+				onClick={(e) => handleClick(e, item[action])}
+				key={idx}
+			>
 				{action}
 			</a>
 		));

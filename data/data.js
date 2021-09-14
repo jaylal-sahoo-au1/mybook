@@ -4,11 +4,9 @@ export const courses = [
 		title: 'HTML',
 		short_description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
-		url: '/html',
-		questionURL: '/htmlTemplate',
 		action: {
-			Questions: '/html',
-			Templates: '/htmlTemplate',
+			Questions: '/htmlQuestion',
+			Templates: '/htmlCssTemplate',
 		},
 	},
 	{
@@ -17,8 +15,8 @@ export const courses = [
 		short_description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
 		action: {
-			Questions: '/html',
-			Templates: '/htmlTemplate',
+			Questions: '/cssQuestion',
+			Templates: '/htmlCssTemplate',
 		},
 	},
 	{
@@ -27,8 +25,8 @@ export const courses = [
 		short_description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
 		action: {
-			Learn: '/javascript',
-			Templates: '/htmlTemplate',
+			Learn: '/javascriptLearn',
+			Templates: '/javascriptTemplate',
 		},
 	},
 	{
@@ -37,8 +35,8 @@ export const courses = [
 		short_description:
 			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
 		action: {
-			Questions: '/html',
-			Templates: '/htmlTemplats',
+			Questions: '/reactQuestion',
+			Templates: '/reactTemplate',
 		},
 	},
 ];

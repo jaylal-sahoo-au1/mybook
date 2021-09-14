@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './components/uiElements/headerBar';
 
-import HTMLContent from '../pages/components/html';
+import HTMLContent from './components/html';
 import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HTML() {
 	const classes = useStyles();
+
 	return (
 		<React.Fragment>
 			<Head>
