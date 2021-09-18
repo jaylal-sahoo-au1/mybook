@@ -4,6 +4,7 @@ import Content from './components/content';
 import Courses from './components/courses';
 import Navbar from './components/navbar';
 import Head from 'next/head';
+import { courses } from '../data/data';
 
 export default function Home(props) {
 	return (
@@ -16,18 +17,7 @@ export default function Home(props) {
 				<Navbar />
 				<Content />
 			</div>
-			<Courses data={props.data} />
+			<Courses data={courses} />
 		</React.Fragment>
 	);
-}
-
-export async function getStaticProps() {
-	const response = await fetch(`http://localhost:3000/api`);
-	const data = await response.json();
-
-	return {
-		props: {
-			data: data,
-		},
-	};
 }
