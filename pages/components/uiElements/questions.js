@@ -57,7 +57,7 @@ export default function Questions(props) {
 					<Toolbar />
 					<div className={classes.drawerContainer}>
 						<List component="nav">
-							{props.data.length &&
+							{props.data &&
 								props.data.map((list, idx) => (
 									<Link
 										to={`${idx + 1}`}
@@ -83,7 +83,7 @@ export default function Questions(props) {
 			) : null}
 			<div className={classes.content}>
 				<Toolbar />
-				{props.data.length &&
+				{props.data &&
 					props.data.map((list, idx) => (
 						<div key={idx} id={`${idx + 1}`}>
 							<Typography variant="h6">
