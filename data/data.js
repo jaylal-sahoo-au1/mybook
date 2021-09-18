@@ -52,6 +52,7 @@ export const htmlQuestion = [
 				tag
 			</p>
 		),
+		example: [],
 	},
 	{
 		id: 2,
@@ -63,6 +64,7 @@ export const htmlQuestion = [
 				the HTML tags to define the characteristics of the element.
 			</p>
 		),
+		example: [],
 	},
 	{
 		id: 3,
@@ -75,6 +77,7 @@ export const htmlQuestion = [
 				For Example &lt;br/&gt;, &lt;img/&gt; etc. tag
 			</p>
 		),
+		example: [],
 	},
 	{
 		id: 4,
@@ -87,6 +90,7 @@ export const htmlQuestion = [
 				Example hhhh
 			</p>
 		),
+		example: [],
 	},
 	{
 		id: 5,
@@ -101,6 +105,20 @@ export const htmlQuestion = [
 				<br />
 			</p>
 		),
+		example: [
+			{
+				title: 'unordered list',
+				url: 'https://jsfiddle.net/x0honp8g/',
+			},
+			{
+				title: 'ordered list',
+				url: 'https://jsfiddle.net/y280zqun/3/',
+			},
+			{
+				title: 'description list',
+				url: '',
+			},
+		],
 	},
 ];
 

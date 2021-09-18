@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './components/uiElements/headerBar';
-
-import HTMLContent from './components/html';
+import Questions from './components/uiElements/questions';
+import { htmlQuestion } from '../data/data';
 import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +30,7 @@ export default function HTML() {
 			</Head>
 			<div className={classes.htmlRoot}>
 				<Navbar heading="HTML Interview Questions" />
-				<HTMLContent />
+				<Questions data={htmlQuestion} />
 			</div>
 		</React.Fragment>
 	);
