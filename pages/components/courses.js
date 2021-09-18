@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
 	button: {
 		fontWeight: '700',
 	},
+	cardContent: {
+		height: '130px',
+	},
 }));
 
 export default function Courses(props) {
@@ -65,7 +68,7 @@ export default function Courses(props) {
 					<Card>
 						<CardHeader title={list.title} className={classes.heading} />
 						<Divider />
-						<CardContent>
+						<CardContent className={classes.cardContent}>
 							<Typography variant="body2" color="textSecondary" component="p">
 								{list.short_description}
 							</Typography>

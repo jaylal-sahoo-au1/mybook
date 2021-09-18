@@ -1,12 +1,8 @@
 import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Toolbar from '@material-ui/core/Toolbar';
-import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 	},
 	toolbar: {
-		backgroundColor: 'rgba(0,0,0,0)',
 		boxShadow: 'none',
+		background: '#333333',
 	},
 	title: {
 		letterSpacing: '5px',
@@ -24,18 +20,6 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		flexGrow: 1,
-	},
-	instagram: {
-		color: 'rgb(228, 64, 95)',
-	},
-	facebook: {
-		color: 'rgb(24, 119, 242)',
-	},
-	linked: {
-		color: 'rgb(10, 102, 194)',
-	},
-	avatarBody: {
-		backgroundColor: 'rgba(0,0,0,0)',
 	},
 }));
 
@@ -92,15 +76,6 @@ const Navbar = (props) => {
 							Courses
 						</Link>
 					</Typography>
-					<Avatar className={classes.avatarBody}>
-						<InstagramIcon className={classes.instagram} />
-					</Avatar>
-					<Avatar className={classes.avatarBody}>
-						<FacebookIcon className={classes.facebook} />
-					</Avatar>
-					<Avatar className={classes.avatarBody}>
-						<LinkedInIcon className={classes.linked} />
-					</Avatar>
 				</Toolbar>
 			</AppBar>
 		</div>

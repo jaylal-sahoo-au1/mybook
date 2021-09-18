@@ -3,7 +3,7 @@ export const courses = [
 		id: 1,
 		title: 'HTML',
 		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+			'This HTML section covers frequently asked HTML interview questions with answer.Along with, we have template section where you are able to access lists of HTML/CSS project',
 		action: {
 			Questions: '/htmlQuestion',
 			Templates: '/htmlCssTemplate',
@@ -13,7 +13,7 @@ export const courses = [
 		id: 2,
 		title: 'CSS',
 		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+			'This CSS section covers frequently asked CSS interview questions with answer. Along with, we have template section where you are able to access lists of HTML/CSS project',
 		action: {
 			Questions: '/cssQuestion',
 			Templates: '/htmlCssTemplate',
@@ -23,17 +23,16 @@ export const courses = [
 		id: 3,
 		title: 'JAVASCRIPT',
 		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+			'This Javascript section covers topicwise detail explanation of javascript concept.  Along with, we have project section where you are able to access lists of javascript project',
 		action: {
 			Learn: '/javascriptLearn',
-			Templates: '/javascriptTemplate',
+			Projects: '/javascriptTemplate',
 		},
 	},
 	{
 		id: 4,
 		title: 'REACT',
-		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+		short_description: 'No Data Available Now',
 		action: {
 			Questions: '/reactQuestion',
 			Templates: '/reactTemplate',
@@ -90,7 +89,12 @@ export const htmlQuestion = [
 				Example hhhh
 			</p>
 		),
-		example: [],
+		example: [
+			{
+				title: 'Example 1',
+				url: 'https://jsfiddle.net/3pctmbd6/1/',
+			},
+		],
 	},
 	{
 		id: 5,
