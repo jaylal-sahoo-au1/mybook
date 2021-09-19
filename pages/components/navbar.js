@@ -56,7 +56,7 @@ const Navbar = (props) => {
 					>
 						My Book
 					</Typography>
-					{isMobile ? (
+					{props.isMobile ? (
 						<Typography className={classes.menu}>
 							<MenuIcon
 								id="menu-button"

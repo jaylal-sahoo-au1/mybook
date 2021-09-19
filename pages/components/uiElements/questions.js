@@ -46,7 +46,7 @@ export default function Questions(props) {
 
 	return (
 		<div className={classes.contentRoot}>
-			{!isMobile ? (
+			{!props.isMobile ? (
 				<Drawer
 					className={classes.drawer}
 					variant="permanent"
