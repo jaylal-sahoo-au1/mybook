@@ -141,7 +141,7 @@ export const htmlQuestion = [
 		id: 7,
 		Ques: 'Describe HTML layout structure.',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					Every web page has different components to display the intended
 					content and a specific UI. But still, there are few things which are
@@ -171,7 +171,7 @@ export const htmlQuestion = [
 						<b>&lt;aside&gt;:</b> Sidebar content of the page.
 					</li>
 				</ul>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -179,7 +179,7 @@ export const htmlQuestion = [
 		id: 8,
 		Ques: 'How to optimize website assets loading?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					To optimize website load time we need to optimize its asset loading
 					and for that:
@@ -212,7 +212,7 @@ export const htmlQuestion = [
 						non-critical assets can be loaded on a need basis
 					</li>
 				</ul>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -220,7 +220,7 @@ export const htmlQuestion = [
 		id: 9,
 		Ques: 'What are the various formatting tags in HTML?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>HTML has various formatting tags:</p>
 
 				<ul>
@@ -261,7 +261,7 @@ export const htmlQuestion = [
 						<b>&lt;ins&gt;</b> - displays as added text
 					</li>
 				</ul>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -269,7 +269,7 @@ export const htmlQuestion = [
 		id: 10,
 		Ques: 'What are the different kinds of Doctypes available?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>The three kinds of Doctypes which are available:</p>
 
 				<ul>
@@ -277,7 +277,7 @@ export const htmlQuestion = [
 					<li>Transitional Doctype</li>
 					<li>Frameset Doctype</li>
 				</ul>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -285,12 +285,12 @@ export const htmlQuestion = [
 		id: 11,
 		Ques: 'Please explain how to indicate the character set being used by a document in HTML?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					The character set is defined in &lt;meta&gt; tag inside &lt;head&gt;
 					element.
 				</p>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -303,7 +303,7 @@ export const htmlQuestion = [
 		id: 12,
 		Ques: 'What is the difference between <strong>, <b> tags and <em>, <i> tags?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					The effect on a normal webpage of the tags &lt;strong&gt;, &lt;b&gt;
 					and &lt;em&gt;&lt;em/&gt; &lt;i&gt; is the same. &lt;b&gt; and
@@ -317,7 +317,7 @@ export const htmlQuestion = [
 					respectively than the rest of the text. These tags have semantic
 					meaning.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -325,7 +325,7 @@ export const htmlQuestion = [
 		id: 13,
 		Ques: 'What is the significance of <head> and <body> tag in HTML?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					&lt;head&gt; tag provides the information about the document. It
 					should always be enclosed in the &lt;html&gt; tag. This tag contains
@@ -345,7 +345,7 @@ export const htmlQuestion = [
 					element in an HTML document and will always be after the &lt;head&gt;
 					tag
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -353,14 +353,14 @@ export const htmlQuestion = [
 		id: 14,
 		Ques: 'Can we display a web page inside a web page or Is nesting of webpages possible?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					Yes, we can display a web page inside another HTML web page. HTML
 					provides a tag &lt;iframe&gt; using which we can achieve this
 					functionality.
 				</p>
 				<p>&lt;iframe src=”url of the web page to embed” /&gt;</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -368,14 +368,14 @@ export const htmlQuestion = [
 		id: 15,
 		Ques: 'How is Cell Padding different from Cell Spacing?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					Cell Spacing is the space or gap between two consecutive cells.
 					Whereas, Cell Padding is the space or gap between the text/ content of
 					the cell and the edge/ border of the cell. Please refer to the above
 					figure example to find the difference.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -383,12 +383,12 @@ export const htmlQuestion = [
 		id: 16,
 		Ques: 'How can we club two or more rows or columns into a single row or column in an HTML table?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					HTML provides two table attributes “rowspan” and “colspan” to make a
 					cell span to multiple rows and columns respectively
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -396,12 +396,12 @@ export const htmlQuestion = [
 		id: 17,
 		Ques: 'Is it possible to change an inline element into a block level element?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					Yes, it is possible using the “display” property with its value as
 					“block”, to change the inline element into a block-level element.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -409,7 +409,7 @@ export const htmlQuestion = [
 		id: 18,
 		Ques: 'In how many ways can we position an HTML element? Or what are the permissible values of the position attribute?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					There are mainly 7 values of position attribute that can be used to
 					position an HTML element:
@@ -441,7 +441,7 @@ export const htmlQuestion = [
 						its parent.
 					</li>
 				</ol>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -449,7 +449,7 @@ export const htmlQuestion = [
 		id: 19,
 		Ques: 'In how many ways you can display HTML elements?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					There are mainly 7 values of position attribute that can be used to
 					position an HTML element:
@@ -484,7 +484,7 @@ export const htmlQuestion = [
 						<b>none:</b> Using this property we can hide the HTML element.
 					</li>
 				</ol>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -492,7 +492,7 @@ export const htmlQuestion = [
 		id: 20,
 		Ques: 'What is the difference between “display: none” and “visibility: hidden”, when used as attributes to the HTML element.',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					When we use the attribute “visibility: hidden” for an HTML element
 					then that element will be hidden from the webpage but still takes up
@@ -500,7 +500,7 @@ export const htmlQuestion = [
 					element then the element will be hidden, and also it won’t take up any
 					space on the webpage.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -508,7 +508,7 @@ export const htmlQuestion = [
 		id: 21,
 		Ques: 'What is SVG?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					HTML SVG is used to describe the two-dimensional vector and
 					vector/raster graphics. SVG images and their behaviors are defined in
@@ -516,7 +516,7 @@ export const htmlQuestion = [
 					with the text editor. It is mostly used for vector type diagrams like
 					pie charts, 2-Dimensional graphs in an X, Y coordinate system.
 				</p>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -529,7 +529,7 @@ export const htmlQuestion = [
 		id: 22,
 		Ques: 'Why is a URL encoded in HTML?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					An URL is encoded to convert non-ASCII characters into a format that
 					can be used over the Internet because a URL is sent over the Internet
@@ -537,7 +537,7 @@ export const htmlQuestion = [
 					outside the ASCII set, the URL has to be converted. The non-ASCII
 					characters are replaced with a % followed by hexadecimal digits.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -545,7 +545,7 @@ export const htmlQuestion = [
 		id: 23,
 		Ques: 'Does a <!DOCTYPE html> tag is a HTML tag?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					No, the &lt;!DOCTYPE html&gt; declaration is not an HTML tag. There
 					are many type of HTML e.g. HTML 4.01 Strict, HTML 4.01 Transitional,
@@ -553,7 +553,7 @@ export const htmlQuestion = [
 					1.0 Frameset, XHTML 1.1 etc. So, &lt;!DOCTYPE html&gt; is used to
 					instruct the web browser about the HTML page.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -561,12 +561,12 @@ export const htmlQuestion = [
 		id: 24,
 		Ques: 'Is there any need to change the web browsers to support HTML5?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					No. Almost all browsers (updated versions) support HTML 5. For example
 					Chrome, Firefox, Opera, Safari, IE.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -574,14 +574,14 @@ export const htmlQuestion = [
 		id: 25,
 		Ques: 'Which type of video formats are supported by HTML5?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>HTML 5 supports three types of video format:</p>
 				<ol>
 					<li>Mp4</li>
 					<li>WebM</li>
 					<li>Ogg</li>
 				</ol>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -598,13 +598,13 @@ export const htmlQuestion = [
 		id: 26,
 		Ques: 'What is the use of figure tag in HTML 5?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					The figure tag is used to add a photo in the document on the web page.
 					It is used to handle the group of diagrams, photos, code listing with
 					some embedded content.
 				</p>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -617,13 +617,13 @@ export const htmlQuestion = [
 		id: 27,
 		Ques: 'What is the use of details and summary tag?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					The details tag is used to specify some additional details on the web
 					page. It can be viewed or hidden on demand. The summary tag is used
 					with details tag. More details.
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
@@ -631,13 +631,13 @@ export const htmlQuestion = [
 		id: 28,
 		Ques: 'What is datalist tag?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					The HTML 5 datalist tag provides an autocomplete feature on the form
 					element. It facilitates users to choose the predefined options to the
 					users to select data.
 				</p>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -650,7 +650,7 @@ export const htmlQuestion = [
 		id: 29,
 		Ques: 'When are comments used in HTML?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					To understand the code easily, you can add code comments to your HTML
 					document. These are not displayed in the browser, but they help you in
@@ -659,7 +659,7 @@ export const htmlQuestion = [
 					end is marked by — &gt;. Anything in the middle will be completely
 					ignored, even if it contains valid HTML.
 				</p>
-			</p>
+			</div>
 		),
 		example: [
 			{
@@ -672,7 +672,7 @@ export const htmlQuestion = [
 		id: 30,
 		Ques: 'Does a hyperlink only apply to text?',
 		Ans: (
-			<p className="m0">
+			<div className="m0">
 				<p>
 					No, hyperlinks can be used both on texts and images. The HTML anchor
 					tag defines a hyperlink that links one page to another page. The
@@ -682,7 +682,7 @@ export const htmlQuestion = [
 				<p>
 					<b>Syntax: </b>&lt;a href = ........... &gt; Link Text &lt;/a&gt;
 				</p>
-			</p>
+			</div>
 		),
 		example: [],
 	},
