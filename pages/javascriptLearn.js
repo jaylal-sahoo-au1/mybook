@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridList from './components/uiElements/gridList';
 import Navbar from './components/uiElements/headerBar';
 import { javascriptContent } from '../data/data';
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
 	htmlRoot: {
@@ -21,9 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HTMLTemplate() {
 	const classes = useStyles();
+	const { query } = useRouter();
 	return (
 		<div className={classes.htmlRoot}>
-			<Navbar heading="Javascript Tutorial" />
+			<Navbar heading={query.heading} />
 			<GridList data={javascriptContent} />
 		</div>
 	);

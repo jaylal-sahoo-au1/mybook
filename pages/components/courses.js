@@ -42,16 +42,19 @@ export default function Courses(props) {
 	const classes = useStyles();
 	const router = useRouter();
 
-	const handleClick = (e, url) => {
+	const handleClick = (e, url, list) => {
 		e.preventDefault();
-		router.push(url);
+		router.push({
+			pathname: url,
+			query: { heading: list.heading },
+		});
 	};
 
-	const returnActionButton = (item) => {
+	const returnActionButton = (item, list) => {
 		let items = Object.keys(item).map((action, idx) => (
 			<a
 				className="link2"
-				onClick={(e) => handleClick(e, item[action])}
+				onClick={(e) => handleClick(e, item[action], list)}
 				key={idx}
 			>
 				{action}
@@ -74,7 +77,7 @@ export default function Courses(props) {
 							</Typography>
 						</CardContent>
 						<Divider />
-						<CardActions>{returnActionButton(list.action)}</CardActions>
+						<CardActions>{returnActionButton(list.action, list)}</CardActions>
 					</Card>
 				</Grid>
 			));

@@ -8,6 +8,7 @@ export const courses = [
 			Questions: '/htmlQuestion',
 			Templates: '/htmlCssTemplate',
 		},
+		heading: 'HTML Interview Questions',
 	},
 	{
 		id: 2,
@@ -18,6 +19,7 @@ export const courses = [
 			Questions: '/cssQuestion',
 			Templates: '/htmlCssTemplate',
 		},
+		heading: 'CSS Interview Questions',
 	},
 	{
 		id: 3,
@@ -28,6 +30,7 @@ export const courses = [
 			Learn: '/javascriptLearn',
 			Templates: '/javascriptTemplate',
 		},
+		heading: 'Javascript Tutorial',
 	},
 	{
 		id: 4,
@@ -38,6 +41,7 @@ export const courses = [
 			Questions: '/reactQuestion',
 			Templates: '/reactTemplate',
 		},
+		heading: 'React Interview Questions',
 	},
 ];
 

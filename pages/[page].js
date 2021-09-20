@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import UAParser from 'ua-parser-js';
 import Navbar from './components/uiElements/headerBar';
 import Questions from './components/uiElements/questions';
 import { htmlQuestion } from '../data/data';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const useStyles = makeStyles((theme) => ({
 	htmlRoot: {
@@ -20,28 +21,40 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function HTML(props) {
+export default function QuestionsTemplate(props) {
 	const classes = useStyles();
+	const { query } = useRouter();
+
+	const renderQuestion = () => {
+		if (query?.page === 'htmlQuestion') {
+			return htmlQuestion;
+		} else {
+			return [];
+		}
+	};
 
 	return (
 		<React.Fragment>
 			<Head>
-				<title>HTML Interview Questions</title>
+				<title>{query?.heading}</title>
 				<meta name="description" content="html interview questions" />
 			</Head>
 			<div className={classes.htmlRoot}>
-				<Navbar heading="HTML Interview Questions" />
-				<Questions
-					data={htmlQuestion}
-					isMobile={props.deviceType === 'mobile' ? true : false}
-				/>
+				<Navbar heading={query?.heading} />
+				{renderQuestion().length ? (
+					<Questions
+						data={renderQuestion()}
+						isMobile={props.deviceType === 'mobile' ? true : false}
+					/>
+				) : null}
 			</div>
 		</React.Fragment>
 	);
 }
 
-HTML.getInitialProps = ({ req }) => {
+QuestionsTemplate.getInitialProps = ({ req }) => {
 	let userAgent;
+
 	if (req) {
 		userAgent = req.headers['user-agent'];
 	} else {
@@ -51,5 +64,7 @@ HTML.getInitialProps = ({ req }) => {
 	parser.setUA(userAgent);
 	const result = parser.getResult();
 	const deviceType = (result.device && result.device.type) || 'desktop';
-	return { deviceType };
+	return {
+		deviceType,
+	};
 };
