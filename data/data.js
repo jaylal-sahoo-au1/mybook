@@ -695,63 +695,40 @@ export const htmlQuestion = [
 export const htmlTemplateContent = [
 	{
 		id: 1,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1631101710/mybook/book1_emgzgf.jpg',
+		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632484503/mybook/demographics_hqml3w.png',
 		heading: 'CSS Grid',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
+		title: 'Home Page',
+		subheader: 'Submitted By: Jaylal sahoo',
 		actionButton: {
 			github: {
 				title: 'Github link',
-				url: '',
+				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/blob/master/homepage.html',
+			},
+			linkedIn: {
+				title: 'Go to Jaylal LinkedIn profile',
+				url: 'https://www.linkedin.com/in/jaylal-sahoo-832b00a2/',
 			},
 		},
-		paragraph:
-			'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+		paragraph: 'This web sample page made up with CSS grid and CSS flexbox',
 	},
 	{
 		id: 2,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1631101725/mybook/book2_emfydd.jpg',
-		heading: 'Landing Page',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
-		paragraph:
-			'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632499292/mybook/receipecard_matw7e.png',
+		heading: 'CSS Grid',
+		title: 'Receipe Card',
+		subheader: 'Submitted By: Jaylal sahoo',
 		actionButton: {
 			github: {
 				title: 'Github link',
-				url: '',
+				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/blob/master/card.html',
+			},
+			linkedIn: {
+				title: 'Go to Jaylal LinkedIn profile',
+				url: 'https://www.linkedin.com/in/jaylal-sahoo-832b00a2/',
 			},
 		},
-	},
-	{
-		id: 3,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1631101737/mybook/book3_xylxlg.jpg',
-		heading: 'Landing Page',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
 		paragraph:
-			'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: '',
-			},
-		},
-	},
-	{
-		id: 4,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1631101749/mybook/book4_wzyaz9.jpg',
-		heading: 'Landing Page',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
-		paragraph:
-			'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: '',
-			},
-		},
+			'This sample receipe card is made up with CSS GRID and CSS Flexbox',
 	},
 ];
 

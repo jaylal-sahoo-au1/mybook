@@ -11,10 +11,10 @@ import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Image from 'next/image';
 import BookIcon from '@material-ui/icons/Book';
 import CodeIcon from '@material-ui/icons/Code';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
 	expand: {
@@ -35,8 +35,11 @@ const useStyles = makeStyles((theme) => ({
 		padding: '16px',
 	},
 	cardcontent: {
-		height: '50vh',
+		height: '80px',
 		overflow: 'auto',
+	},
+	linkedIn: {
+		color: '#0a66c2',
 	},
 }));
 
@@ -44,23 +47,21 @@ export default function GridList(props) {
 	const classes = useStyles();
 	const [expanded, setExpanded] = React.useState(false);
 
-	const isMobile = useMediaQuery('(min-width:600px)');
-
 	const handleExpandClick = () => {
 		setExpanded(!expanded);
 	};
 
-	const styleFn = (item) => {
-		if (item?.style && isMobile) {
-			if (item.style.height === '50') {
-				return classes.cardcontent;
-			} else {
-				return '';
-			}
-		} else {
-			return '';
-		}
-	};
+	// const styleFn = (item) => {
+	// 	if (item?.style && isMobile) {
+	// 		if (item.style.height === '50') {
+	// 			return classes.cardcontent;
+	// 		} else {
+	// 			return '';
+	// 		}
+	// 	} else {
+	// 		return '';
+	// 	}
+	// };
 
 	const redirect = (item) => {
 		window.open(`${item}`, '_blank');
@@ -75,7 +76,25 @@ export default function GridList(props) {
 						props.data.map((list, idx) => (
 							<Grid item xs={12} md={6} lg={4} key={idx}>
 								<Card>
-									<CardHeader title={list.title} subheader={list.subheader} />
+									<CardHeader
+										action={
+											<Tooltip
+												title={
+													list?.actionButton?.linkedIn?.title ||
+													'Go to LinkedIn profile'
+												}
+												onClick={() =>
+													redirect(list?.actionButton?.linkedIn?.url)
+												}
+											>
+												<IconButton aria-label="settings">
+													<LinkedInIcon className={classes.linkedIn} />
+												</IconButton>
+											</Tooltip>
+										}
+										title={list.title}
+										subheader={list.subheader}
+									/>
 									{list?.img ? (
 										<Image
 											src={list.img}
@@ -84,7 +103,7 @@ export default function GridList(props) {
 											alt="Browser not supporting"
 										/>
 									) : null}
-									<CardContent className={styleFn(list)}>
+									<CardContent className={classes.cardcontent}>
 										{list?.para ? (
 											<Typography component="div" variant="body2">
 												{list.para}
