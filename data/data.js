@@ -3,7 +3,7 @@ export const courses = [
 		id: 1,
 		title: 'HTML',
 		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+			'HTML is the standard markup language for Web pages.With HTML you can create your own Website layout.In this HTML tutorial, you will find interview related questions and htm/css templates/projects.',
 		action: {
 			Questions: '/htmlQuestion',
 			Templates: '/htmlCssTemplate',
@@ -14,7 +14,7 @@ export const courses = [
 		id: 2,
 		title: 'CSS',
 		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+			'CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will help you to find interview questions and html/css templates/projects.',
 		action: {
 			Questions: '/cssQuestion',
 			Templates: '/htmlCssTemplate',
@@ -24,8 +24,7 @@ export const courses = [
 	{
 		id: 3,
 		title: 'JAVASCRIPT',
-		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+		short_description: 'No Data Available Now',
 		action: {
 			Learn: '/javascriptLearn',
 			Templates: '/javascriptTemplate',
@@ -35,8 +34,7 @@ export const courses = [
 	{
 		id: 4,
 		title: 'REACT',
-		short_description:
-			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+		short_description: 'No Data Available Now',
 		action: {
 			Questions: '/reactQuestion',
 			Templates: '/reactTemplate',
