@@ -29,7 +29,9 @@ export default function HTMLTemplate(props) {
 }
 
 export async function getServerSideProps(context) {
-	const res = await fetch('http://mybook-theta.vercel.app/api/htmlcsstemplate');
+	const res = await fetch(
+		'https://mybook-theta.vercel.app/api/htmlcsstemplate'
+	);
 	const data = await res.json();
 
 	return {
