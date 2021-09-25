@@ -714,46 +714,6 @@ export const htmlQuestion = [
 	},
 ];
 
-export const htmlTemplateContent = [
-	{
-		id: 1,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632484503/mybook/demographics_hqml3w.png',
-		heading: 'CSS Grid',
-		title: 'Home Page',
-		subheader: 'Submitted By: Jaylal sahoo',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/blob/master/homepage.html',
-			},
-			linkedIn: {
-				title: 'Go to Jaylal LinkedIn profile',
-				url: 'https://www.linkedin.com/in/jaylal-sahoo-832b00a2/',
-			},
-		},
-		paragraph: 'This web sample page made up with CSS grid and CSS flexbox',
-	},
-	{
-		id: 2,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632499292/mybook/receipecard_matw7e.png',
-		heading: 'CSS Grid',
-		title: 'Receipe Card',
-		subheader: 'Submitted By: Jaylal sahoo',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/blob/master/card.html',
-			},
-			linkedIn: {
-				title: 'Go to Jaylal LinkedIn profile',
-				url: 'https://www.linkedin.com/in/jaylal-sahoo-832b00a2/',
-			},
-		},
-		paragraph:
-			'This sample receipe card is made up with CSS GRID and CSS Flexbox',
-	},
-];
-
 export const javascriptContent = [
 	{
 		id: 1,
@@ -866,27 +826,5 @@ export const javascriptContent = [
 				url: '',
 			},
 		},
-	},
-];
-
-export const jsTemplate = [
-	{
-		id: 1,
-		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632552395/mybook/analogclock_qi2piy.jpg',
-		heading: '',
-		title: 'Analog Clock',
-		subheader: 'Submitted By: Amit Paul',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/tree/master/clock',
-			},
-			linkedIn: {
-				title: 'Go to Amit LinkedIn profile',
-				url: 'https://www.linkedin.com/in/amit-paul-138117212/',
-			},
-		},
-		paragraph:
-			'Fully functional analog clock with HTML CSS and vanilla Javascript',
 	},
 ];
