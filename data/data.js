@@ -753,7 +753,416 @@ export const htmlTemplateContent = [
 			'This sample receipe card is made up with CSS GRID and CSS Flexbox',
 	},
 ];
+export const cssQuestions = [
+  {
+    id: 1,
+    Ques: 'What is Css ?',
+    Ans: (
+      <p className="m0">
+        <p>
+          CSS stands for Cascading Style Sheet. It is a popular styling language
+          which is used with HTML to design websites. It can also be used with
+          any XML documents including plain XML, SVG, and XUL
+        </p>
+      </p>
+    ),
+    example: [
+      {
+        title: 'More details',
+        url: 'https://www.javatpoint.com/what-is-css',
+      },
+    ],
+  },
+  {
+    id: 2,
+    Ques: 'What is the origin of CSS?',
+    Ans: (
+      <p className="m0">
+        <p>
+          SGML (Standard Generalized Markup Language) is the origin of CSS. It
+          is a language that defines markup languages.
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 3,
+    Ques: 'What is the Box model in CSS? Which CSS properties are a part of it?',
+    Ans: (
+      <p className="m0">
+        <p>
+          A rectangle box is wrapped around every HTML element. The box model is
+          used to determine the height and width of the rectangular box. The CSS
+          Box consists of Width and height (or in the absence of that, default
+          values and the content inside), padding, borders, margin.
+        </p>
+        <ul>
+          <li>
+            <b>Content:</b> Actual Content of the box where the text or image
+            placed.
+          </li>
+          <li>
+            <b>Padding:</b>Area surrounding the content (Space between the
+            border and content).
+          </li>
+          <li>
+            <b>Margin:</b>Area surrounding the border.
+          </li>
+          <li>
+            <b>Border:</b>Area surrounding the padding
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [
+      {
+        title: 'View',
+        url: 'https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/000/106/original/Box_Model_in_CSS.jpg?1615279292',
+      },
+    ],
+  },
+  {
+    id: 4,
+    Ques: 'What are the advantages of using CSS?',
+    Ans: (
+      <p className="m0">
+        <p>The main advantages of CSS are given below:</p>
+        <ul>
+          <li>
+            <b>Separation of content from presentation - </b>CSS provides a way
+            to present the same content in multiple presentation formats in
+            mobile or desktop or laptop.
+          </li>
 
+          <li>
+            <b>Easy to maintain -</b> CSS, built effectively can be used to
+            change the look and feel complete by making small changes. To make a
+            global change, simply change the style, and all elements in all the
+            web pages will be updated automatically.
+          </li>
+
+          <li>
+            <b>Bandwidth -</b> Used effectively, the style sheets will be stored
+            in the browser cache and they can be used on multiple pages, without
+            having to download again
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 5,
+    Ques: 'What are the limitations of CSS?',
+    Ans: (
+      <p className="m0">
+        <p>Disadvantages of CSS are given below:</p>
+        <ul>
+          <li>
+            <b>Browser Compatibility:</b> Some style selectors are supported and
+            some are not. We have to determine which style is supported or not
+            using the @support selector).
+          </li>
+
+          <li>
+            <b>Cross Browser issue:</b>Some selectors behave differently in a
+            different browser).
+          </li>
+
+          <li>
+            <b>There is no parent selector:</b> Currently, Using CSS, you can’t
+            select a parent tag.
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 6,
+    Ques: 'How to include CSS in the webpage?',
+    Ans: (
+      <p className="m0">
+        <p>There are different ways to include a CSS in a webpage, </p>
+        <ol>
+          <li>
+            <p>
+              {' '}
+              External Style Sheet: An external file linked to your HTML
+              document: Using link tag, we can link the style sheet to the HTML
+              page.
+            </p>
+            <p>
+              &lt;link rel=“mystyles.css” type=“text/css” href= “mystyles.css
+              ”/&gt;
+            </p>
+            {/* “ ” */}
+          </li>
+
+          <li>
+            Embed CSS with a style tag: A set of CSS styles included within your
+            HTML page.
+            <p>
+              &lt;style type=“text/css”&gt; /*Add style rules here*/
+              &lt;/style&gt;
+              <br />
+              <br />
+              Add your CSS rules between the opening and closing style tags and
+              write your CSS exactly the same way as you do in stand-alone
+              stylesheet files.
+            </p>
+          </li>
+
+          <li>
+            Add inline styles to HTML elements(CSS rules applied directly within
+            an HTML tag.): Style can be added directly to the HTML element using
+            a style tag.
+            <p>
+              &lt;h2 style=“color:red;background:black ”&gt;Inline
+              Style&lt;/h2&gt;
+            </p>
+          </li>
+          <li>
+            Import a stylesheet file (An external file imported into another CSS
+            file): Another way to add CSS is by using the @import rule. This is
+            to add a new CSS file within CSS itself.
+            <p>@import “path/to/style.css”;</p>
+          </li>
+        </ol>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 7,
+    Ques: 'What is VH/VW (viewport height/ viewport width) in CSS?',
+    Ans: (
+      <p className="m0">
+        <p>
+          It’s a CSS unit used to measure the height and width in percentage
+          with respect to the viewport. It is used mainly in responsive design
+          techniques. The measure VH is equal to 1/100 of the height of the
+          viewport. If the height of the browser is 1000px, 1vh is equal to
+          10px. Similarly, if the width is 1000px, then 1 vw is equal to 10px.
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 8,
+    Ques: 'Difference between reset vs normalize CSS?. How do they differ?',
+    Ans: (
+      <p className="m0">
+        <p>
+          Reset CSS: CSS resets aim to remove all built-in browser styling. For
+          example margins, paddings, font-sizes of all elements are reset to be
+          the same.
+          <br />
+          Normalize CSS: Normalize CSS aims to make built-in browser styling
+          consistent across browsers. It also corrects bugs for common browser
+          dependencies
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 9,
+    Ques: 'What is the difference between inline, inline-block, and block?',
+    Ans: (
+      <p className="m0">
+        <ul>
+          <li>
+            <b> Block Element:</b> The block elements always start on a new
+            line. They will also take space for an entire row or width. List of
+            block elements are &lt;div&gt;,&lt;p&gt;.
+          </li>
+
+          <li>
+            <b>Inline Elements: </b>Inline elements don`t start on a new line,
+            they appear on the same line as the content and tags beside them.
+            Some examples of inline elements are &lt;a&gt;, &lt;span&gt;,
+            &lt;strong&gt;., and &lt;img&gt; tags.
+          </li>
+
+          <li>
+            <b>Inline Block Elements:</b> Inline-block elements are similar to
+            inline elements, except they can have padding and margins added on
+            all four sides.
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 10,
+    Ques: 'How do you test the webpage in different browsers?',
+    Ans: (
+      <p className="m0">
+        <p>
+          It’s most important to test a website in different browsers when
+          you’re first designing it, or when making major changes. However, it’s
+          also important to repeat these tests periodically, since browsers go
+          through a lot of updates and changes.
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 11,
+    Ques: 'How do you specify units in the CSS?. What are the different ways to do it?',
+    Ans: (
+      <p className="m0">
+        <p>
+          There are different ways to specify units in CSS like px, em, pt,
+          percentage (%). px(Pixel) gives fine-grained control and maintains
+          alignment because 1 px or multiple of 1 px is guaranteed to look
+          sharp. px is not cascade. em maintains relative size. you can have
+          responsive fonts. Em, will cascade 1em is equal to the current
+          font-size of the element or the browser default. If u sent font-size
+          to 16px then 1em = 16px. The common practice is to set default body
+          font-size to 62.5% (equal to 10px).
+          <br />
+          <br />
+          pt(point) are traditionally used in print. 1pt = 1/72 inch and it is a
+          fixed-size unit.
+          <br />
+          <br />
+          %(percentage) sets font-size relative to the font size of the body.
+          Hence, you have to set the font-size of the body to a reasonable size
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 12,
+    Ques: 'Does margin-top or margin-bottom have an effect on inline elements?',
+    Ans: (
+      <p className="m0">
+        <p>
+          No, it doesn’t affect the inline elements. Inline elements flow with
+          the contents of the page.
+        </p>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 13,
+    Ques: 'Explain CSS position property?',
+    Ans: (
+      <p className="m0">
+        <ul>
+          <li>
+            <b>Absolute</b> <br />
+            To place an element exactly where you want to place it. absolute
+            position is actually set relative to the element`s parent. if no
+            parent is available then the relative place to the page itself (it
+            will default all the way back up to the element).
+          </li>
+
+          <li>
+            <b>Relative</b> <br />
+            `Relative to itself`. Setting position: relative; on an element and
+            no other positioning attributes, it will no effect on its
+            positioning. It allows the use of z-index on the element and it
+            limits the scope of absolutely positioned child elements. Any child
+            element will be absolutely positioned within that block.
+          </li>
+          <li>
+            <b>Fixed</b> <br />
+            The element is positioned relative to the viewport or the browser
+            window itself. viewport doesn`t change if you scroll and hence the
+            fixed element will stay right in the same position.
+          </li>
+          <li>
+            <b>Static</b> <br />
+            Static default for every single page element. The only reason you
+            would ever set an element to position: static is to
+            forcefully-remove some positioning that got applied to an element
+            outside of your control.
+          </li>
+          <li>
+            <b>Sticky</b> <br />
+            Sticky positioning is a hybrid of relative and fixed positioning.
+            The element is treated as relative positioned until it crosses a
+            specified threshold, at which point it is treated as fixed
+            positioned.
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [
+      {
+        title: 'Image View',
+        url: 'https://s3.ap-south-1.amazonaws.com/myinterviewtrainer-domestic/public_assets/assets/000/000/107/original/CSS_Position_Property.jpg?1615286481',
+      },
+    ],
+  },
+  {
+    id: 14,
+    Ques: 'What does DOM reflow occur?',
+    Ans: (
+      <p className="m0">
+        <p>
+          Reflow is the name of the web browser process for re-calculating the
+          positions and geometries of elements in the document, for the purpose
+          of re-rendering part or all of the document.{' '}
+        </p>
+        <ul>
+          <li>Insert, remove or update an element in the DOM.</li>
+
+          <li>Modify content on the page, e.g. the text in an input box.</li>
+
+          <li>Move a DOM element.</li>
+          <li>Animate a DOM element.</li>
+          <li>
+            Take measurements of an element such as offsetHeight or
+            getComputedStyle
+          </li>
+          <li>Change a CSS style.</li>
+        </ul>
+      </p>
+    ),
+    example: [],
+  },
+  {
+    id: 15,
+    Ques: 'Different Box Sizing Property?',
+    Ans: (
+      <p className="m0">
+        <p>
+          The box-sizing CSS property sets how the total width and height of an
+          element are calculated.
+        </p>
+        <ul>
+          <li>
+            <b>Content-box:</b> The default width and height values apply to the
+            element`s content only. The padding and border are added to the
+            outside of the box.
+          </li>
+
+          <li>
+            <b>Padding-box:</b> Width and height values apply to the element`s
+            content and its padding. The border is added to the outside of the
+            box. Currently, only Firefox supports the padding-box value
+          </li>
+
+          <li>
+            <b>Border-box:</b> Width and height values apply to the content,
+            padding, and border.
+          </li>
+        </ul>
+      </p>
+    ),
+    example: [],
+  },
+];
 export const javascriptContent = [
 	{
 		id: 1,
