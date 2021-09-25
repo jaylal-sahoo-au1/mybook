@@ -15,6 +15,7 @@ import Image from 'next/image';
 import BookIcon from '@material-ui/icons/Book';
 import CodeIcon from '@material-ui/icons/Code';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
 	expand: {
@@ -34,8 +35,12 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 		padding: '16px',
 	},
-	cardcontent: {
-		height: '80px',
+	cardcontent1: {
+		height: '50vh',
+		overflow: 'auto',
+	},
+	cardcontent2: {
+		height: '50px',
 		overflow: 'auto',
 	},
 	linkedIn: {
@@ -51,17 +56,19 @@ export default function GridList(props) {
 		setExpanded(!expanded);
 	};
 
-	// const styleFn = (item) => {
-	// 	if (item?.style && isMobile) {
-	// 		if (item.style.height === '50') {
-	// 			return classes.cardcontent;
-	// 		} else {
-	// 			return '';
-	// 		}
-	// 	} else {
-	// 		return '';
-	// 	}
-	// };
+	const isMobile = useMediaQuery('(max-width:600px');
+
+	const styleFn = (item) => {
+		if (item?.style && isMobile) {
+			if (item.style.height === '50') {
+				return classes.cardcontent1;
+			} else {
+				return '';
+			}
+		} else {
+			return classes.cardcontent1;
+		}
+	};
 
 	const redirect = (item) => {
 		window.open(`${item}`, '_blank');
@@ -103,7 +110,7 @@ export default function GridList(props) {
 											alt="Browser not supporting"
 										/>
 									) : null}
-									<CardContent className={classes.cardcontent}>
+									<CardContent className={styleFn(list)}>
 										{list?.para ? (
 											<Typography component="div" variant="body2">
 												{list.para}

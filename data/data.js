@@ -24,7 +24,8 @@ export const courses = [
 	{
 		id: 3,
 		title: 'JAVASCRIPT',
-		short_description: 'No Data Available Now',
+		short_description:
+			'JavaScript is the programming language of the Web.In this Javascript tutorial, you will find topic wise javascript explains and projects',
 		action: {
 			Learn: '/javascriptLearn',
 			Templates: '/javascriptTemplate',
@@ -849,36 +850,26 @@ export const javascriptContent = [
 			height: '50',
 		},
 	},
+];
+
+export const jsTemplate = [
 	{
-		id: 3,
-		heading: 'Landing Page',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
-		para: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
+		id: 1,
+		img: 'https://res.cloudinary.com/dpczsvkxd/image/upload/v1632552395/mybook/analogclock_qi2piy.jpg',
+		heading: '',
+		title: 'Analog Clock',
+		subheader: 'Submitted By: Amit Paul',
 		actionButton: {
 			github: {
 				title: 'Github link',
-				url: '',
+				url: 'https://github.com/jaylal-sahoo-au1/htmlcssTemplate/tree/master/clock',
+			},
+			linkedIn: {
+				title: 'Go to Amit LinkedIn profile',
+				url: 'https://www.linkedin.com/in/amit-paul-138117212/',
 			},
 		},
-		style: {
-			height: '50',
-		},
-	},
-	{
-		id: 4,
-		heading: 'Landing Page',
-		title: 'Shrimp and Chorizo Paella',
-		subheader: 'September 14, 2016',
-		para: 'This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.',
-		actionButton: {
-			github: {
-				title: 'Github link',
-				url: '',
-			},
-		},
-		style: {
-			height: '50',
-		},
+		paragraph:
+			'Fully functional analog clock with HTML CSS and vanilla Javascript',
 	},
 ];

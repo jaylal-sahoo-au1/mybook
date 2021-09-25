@@ -1,7 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './components/uiElements/headerBar';
+import GridList from './components/uiElements/gridList';
 import Head from 'next/head';
+import { jsTemplate } from '../data/data';
 
 const useStyles = makeStyles((theme) => ({
 	htmlRoot: {
@@ -28,6 +30,7 @@ export default function HTML() {
 			</Head>
 			<div className={classes.htmlRoot}>
 				<Navbar heading="JavaScript Projects" />
+				<GridList data={jsTemplate} />
 			</div>
 		</React.Fragment>
 	);
