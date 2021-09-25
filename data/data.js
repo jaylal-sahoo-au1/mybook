@@ -5,10 +5,15 @@ export const courses = [
 		short_description:
 			'HTML is the standard markup language for Web pages.With HTML you can create your own Website layout.In this HTML tutorial, you will find interview related questions and htm/css templates/projects.',
 		action: {
-			Questions: '/htmlQuestion',
-			Templates: '/htmlCssTemplate',
+			Questions: {
+				heading: 'HTML Interview Questions',
+				url: '/htmlQuestion',
+			},
+			Templates: {
+				heading: 'HTML/CSS Templates',
+				url: '/htmlCssTemplate',
+			},
 		},
-		heading: 'HTML Interview Questions',
 	},
 	{
 		id: 2,
@@ -16,8 +21,14 @@ export const courses = [
 		short_description:
 			'CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will help you to find interview questions and html/css templates/projects.',
 		action: {
-			Questions: '/cssQuestion',
-			Templates: '/htmlCssTemplate',
+			Questions: {
+				heading: 'CSS Interview Questions',
+				url: '/cssQuestion',
+			},
+			Templates: {
+				heading: 'HTML/CSS Templates',
+				url: '/htmlCssTemplate',
+			},
 		},
 		heading: 'CSS Interview Questions',
 	},
@@ -27,8 +38,14 @@ export const courses = [
 		short_description:
 			'JavaScript is the programming language of the Web.In this Javascript tutorial, you will find topic wise javascript explains and projects',
 		action: {
-			Learn: '/javascriptLearn',
-			Templates: '/javascriptTemplate',
+			Questions: {
+				heading: 'JavaScript Tutorial',
+				url: '/javascriptLearn',
+			},
+			Templates: {
+				heading: 'JavaScript Projects',
+				url: '/javascriptTemplate',
+			},
 		},
 		heading: 'Javascript Tutorial',
 	},
@@ -37,8 +54,14 @@ export const courses = [
 		title: 'REACT',
 		short_description: 'No Data Available Now',
 		action: {
-			Questions: '/reactQuestion',
-			Templates: '/reactTemplate',
+			Questions: {
+				heading: 'React JS Tutorial',
+				url: '/reactQuestion',
+			},
+			Templates: {
+				heading: 'React JS Projects',
+				url: '/reactTemplate',
+			},
 		},
 		heading: 'React Interview Questions',
 	},
@@ -791,9 +814,6 @@ export const javascriptContent = [
 				</p>
 			</div>
 		),
-		style: {
-			height: '50',
-		},
 	},
 	{
 		id: 2,
@@ -845,9 +865,6 @@ export const javascriptContent = [
 				title: 'Start Coding',
 				url: '',
 			},
-		},
-		style: {
-			height: '50',
 		},
 	},
 ];

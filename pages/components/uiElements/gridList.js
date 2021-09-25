@@ -15,7 +15,6 @@ import Image from 'next/image';
 import BookIcon from '@material-ui/icons/Book';
 import CodeIcon from '@material-ui/icons/Code';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
 	expand: {
@@ -40,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 		overflow: 'auto',
 	},
 	cardcontent2: {
-		height: '50px',
+		height: '80px',
 		overflow: 'auto',
 	},
 	linkedIn: {
@@ -56,15 +55,9 @@ export default function GridList(props) {
 		setExpanded(!expanded);
 	};
 
-	const isMobile = useMediaQuery('(max-width:600px');
-
 	const styleFn = (item) => {
-		if (item?.style && isMobile) {
-			if (item.style.height === '50') {
-				return classes.cardcontent1;
-			} else {
-				return '';
-			}
+		if (item?.img) {
+			return classes.cardcontent2;
 		} else {
 			return classes.cardcontent1;
 		}

@@ -42,11 +42,11 @@ export default function Courses(props) {
 	const classes = useStyles();
 	const router = useRouter();
 
-	const handleClick = (e, url, list) => {
+	const handleClick = (e, action) => {
 		e.preventDefault();
 		router.push({
-			pathname: url,
-			query: { heading: list.heading },
+			pathname: action.url,
+			query: { heading: action.heading },
 		});
 	};
 
@@ -54,7 +54,7 @@ export default function Courses(props) {
 		let items = Object.keys(item).map((action, idx) => (
 			<a
 				className="link2"
-				onClick={(e) => handleClick(e, item[action], list)}
+				onClick={(e) => handleClick(e, item[action])}
 				key={idx}
 			>
 				{action}
