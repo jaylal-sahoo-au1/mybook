@@ -113,7 +113,9 @@ export default function GridList(props) {
 													list?.actionButton?.livelink?.url ? classes.image : ''
 												}
 												onClick={() =>
-													redirect(list?.actionButton?.livelink?.url)
+													list?.actionButton?.livelink?.url
+														? redirect(list?.actionButton?.livelink?.url)
+														: ''
 												}
 											/>
 										</React.Fragment>
