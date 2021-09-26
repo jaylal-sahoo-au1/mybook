@@ -36,7 +36,7 @@ export default function HTML(props) {
 }
 
 export async function getServerSideProps(context) {
-	const res = await fetch('https://mybook-theta.vercel.app/api/jstemplate');
+	const res = await fetch(process.env.PROD_ENV + '/api/jstemplate');
 	const data = await res.json();
 
 	return {
