@@ -4,6 +4,7 @@ import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -44,6 +45,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	linkedIn: {
 		color: '#0a66c2',
+	},
+	image: {
+		'&:hover': {
+			opacity: '0.5',
+			cursor: 'pointer',
+		},
 	},
 }));
 
@@ -96,12 +103,20 @@ export default function GridList(props) {
 										subheader={list.subheader}
 									/>
 									{list?.img ? (
-										<Image
-											src={list.img}
-											width={500}
-											height={333}
-											alt="Browser not supporting"
-										/>
+										<React.Fragment>
+											<Image
+												src={list.img}
+												width={500}
+												height={333}
+												alt="Browser not supporting"
+												className={
+													list?.actionButton?.livelink?.url ? classes.image : ''
+												}
+												onClick={() =>
+													redirect(list?.actionButton?.livelink?.url)
+												}
+											/>
+										</React.Fragment>
 									) : null}
 									<CardContent className={styleFn(list)}>
 										{list?.para ? (
