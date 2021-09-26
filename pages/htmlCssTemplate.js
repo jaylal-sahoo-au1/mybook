@@ -2,7 +2,6 @@ import React from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import GridList from './components/uiElements/gridList';
 import Navbar from './components/uiElements/headerBar';
-import { htmlTemplateContent } from '../data/data';
 
 const useStyles = makeStyles((theme) => ({
 	htmlRoot: {
@@ -19,12 +18,23 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function HTMLTemplate() {
+export default function HTMLTemplate(props) {
 	const classes = useStyles();
 	return (
 		<div className={classes.htmlRoot}>
 			<Navbar heading="HTML Template" />
-			<GridList data={htmlTemplateContent} />
+			<GridList data={props.data} />
 		</div>
 	);
+}
+
+export async function getServerSideProps(context) {
+	const res = await fetch(process.env.PROD_ENV + '/api/htmlcsstemplate');
+	const data = await res.json();
+
+	return {
+		props: {
+			data: data,
+		},
+	};
 }
