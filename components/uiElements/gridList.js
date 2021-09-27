@@ -45,10 +45,39 @@ const useStyles = makeStyles((theme) => ({
 	linkedIn: {
 		color: '#0a66c2',
 	},
+	imageLayout: {
+		height: '100%',
+		width: '100%',
+		position: 'relative',
+	},
 	image: {
+		height: '100%',
+		width: '100%',
+	},
+	hoverly: {
+		position: 'absolute',
+		left: 0,
+		top: 0,
+		height: '100%',
+		width: '100%',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		opacity: 0,
+		transition: 'opacity 0.25s',
+		background: 'rgba(0,0,0,0.6)',
 		'&:hover': {
-			opacity: '0.5',
-			cursor: 'pointer',
+			opacity: 1,
+		},
+	},
+	btnLive: {
+		color: '#fff',
+		border: '1px solid #fff',
+		transition: 'all 0.25s',
+		'&:hover': {
+			opacity: 0.7,
+			color: '#1976d2',
+			border: '1px solid #1976d2',
 		},
 	},
 }));
@@ -56,7 +85,9 @@ const useStyles = makeStyles((theme) => ({
 export default function GridList(props) {
 	const classes = useStyles();
 	const [expanded, setExpanded] = React.useState(false);
-
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}?w=${width}&q=${quality || 100}`;
+	};
 	const handleExpandClick = () => {
 		setExpanded(!expanded);
 	};
@@ -104,22 +135,34 @@ export default function GridList(props) {
 										subheader={list.subheader}
 									/>
 									{list?.img ? (
-										<React.Fragment>
+										<div className={classes.imageLayout}>
 											<Image
+												loader={myLoader}
 												src={list.img}
+												alt="Browser not supporting"
 												width={500}
 												height={333}
-												alt="Browser not supporting"
 												className={
 													list?.actionButton?.livelink?.url ? classes.image : ''
 												}
-												onClick={() =>
-													list?.actionButton?.livelink?.url
-														? redirect(list?.actionButton?.livelink?.url)
-														: ''
-												}
 											/>
-										</React.Fragment>
+											{list?.actionButton?.livelink?.url ? (
+												<div className={classes.hoverly}>
+													<Button
+														variant="outlined"
+														size="small"
+														className={classes.btnLive}
+														onClick={() =>
+															list?.actionButton?.livelink?.url
+																? redirect(list?.actionButton?.livelink?.url)
+																: ''
+														}
+													>
+														Go Live
+													</Button>
+												</div>
+											) : null}
+										</div>
 									) : null}
 									<CardContent className={styleFn(list)}>
 										{list?.para ? (
