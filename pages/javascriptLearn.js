@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GridList from './components/uiElements/gridList';
-import Navbar from './components/uiElements/headerBar';
+import GridList from '../components/uiElements/gridList';
+import Navbar from '../components/uiElements/headerBar';
 import { javascriptContent } from '../data/data';
 import { useRouter } from 'next/router';
 

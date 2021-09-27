@@ -4,7 +4,6 @@ import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -85,19 +84,21 @@ export default function GridList(props) {
 								<Card>
 									<CardHeader
 										action={
-											<Tooltip
-												title={
-													list?.actionButton?.linkedIn?.title ||
-													'Go to LinkedIn profile'
-												}
-												onClick={() =>
-													redirect(list?.actionButton?.linkedIn?.url)
-												}
-											>
-												<IconButton aria-label="settings">
-													<LinkedInIcon className={classes.linkedIn} />
-												</IconButton>
-											</Tooltip>
+											list?.actionButton?.linkedIn ? (
+												<Tooltip
+													title={
+														list?.actionButton?.linkedIn?.title ||
+														'Go to LinkedIn profile'
+													}
+													onClick={() =>
+														redirect(list?.actionButton?.linkedIn?.url)
+													}
+												>
+													<IconButton aria-label="settings">
+														<LinkedInIcon className={classes.linkedIn} />
+													</IconButton>
+												</Tooltip>
+											) : null
 										}
 										title={list.title}
 										subheader={list.subheader}

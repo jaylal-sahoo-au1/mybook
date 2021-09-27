@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import UAParser from 'ua-parser-js';
-import Navbar from './components/uiElements/headerBar';
-import Questions from './components/uiElements/questions';
+import Navbar from '../components/uiElements/headerBar';
+import Questions from '../components/uiElements/questions';
 import { htmlQuestion, cssQuestions } from '../data/data';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

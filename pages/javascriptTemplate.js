@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from './components/uiElements/headerBar';
-import GridList from './components/uiElements/gridList';
+import Navbar from '../components/uiElements/headerBar';
+import GridList from '../components/uiElements/gridList';
 import Head from 'next/head';
 
 const useStyles = makeStyles((theme) => ({
