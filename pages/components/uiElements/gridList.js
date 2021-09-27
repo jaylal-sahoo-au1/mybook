@@ -4,6 +4,7 @@ import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
@@ -46,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
 	linkedIn: {
 		color: '#0a66c2',
 	},
+<<<<<<< HEAD
 =======
   expand: {
     transform: 'rotate(0deg)',
@@ -111,6 +113,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 >>>>>>> Stashed changes
+=======
+	image: {
+		'&:hover': {
+			opacity: '0.5',
+			cursor: 'pointer',
+		},
+	},
+>>>>>>> f613fb93966ebbee8af6599d9fc4890f0b041a8f
 }));
 
 export default function GridList(props) {
@@ -135,99 +145,6 @@ export default function GridList(props) {
     window.open(`${item}`, '_blank');
   };
 
-<<<<<<< Updated upstream
-	return (
-		<React.Fragment>
-			<Toolbar></Toolbar>
-			<div className={classes.htmlRoot} role="main">
-				<Grid container spacing={2}>
-					{props.data &&
-						props.data.map((list, idx) => (
-							<Grid item xs={12} md={6} lg={4} key={idx}>
-								<Card>
-									<CardHeader
-										action={
-											<Tooltip
-												title={
-													list?.actionButton?.linkedIn?.title ||
-													'Go to LinkedIn profile'
-												}
-												onClick={() =>
-													redirect(list?.actionButton?.linkedIn?.url)
-												}
-											>
-												<IconButton aria-label="settings">
-													<LinkedInIcon className={classes.linkedIn} />
-												</IconButton>
-											</Tooltip>
-										}
-										title={list.title}
-										subheader={list.subheader}
-									/>
-									{list?.img ? (
-										<Image
-											src={list.img}
-											width={500}
-											height={333}
-											alt="Browser not supporting"
-										/>
-									) : null}
-									<CardContent className={styleFn(list)}>
-										{list?.para ? (
-											<Typography component="div" variant="body2">
-												{list.para}
-											</Typography>
-										) : null}
-										{list?.paragraph ? (
-											<Typography
-												variant="body2"
-												color="textSecondary"
-												component="p"
-											>
-												{list.paragraph}
-											</Typography>
-										) : null}
-									</CardContent>
-									<CardActions disableSpacing>
-										{list?.actionButton?.github ? (
-											<Tooltip title={list.actionButton.github.title}>
-												<IconButton
-													aria-label={list.actionButton.github.title}
-													onClick={() => redirect(list.actionButton.github.url)}
-												>
-													<GitHubIcon />
-												</IconButton>
-											</Tooltip>
-										) : null}
-										{list?.actionButton?.blog ? (
-											<Tooltip title={list.actionButton.blog.title}>
-												<IconButton
-													aria-label={list.actionButton.blog.title}
-													onClick={() => redirect(list.actionButton.blog.url)}
-												>
-													<BookIcon />
-												</IconButton>
-											</Tooltip>
-										) : null}
-										{list?.actionButton?.code ? (
-											<Tooltip title={list.actionButton.blog.title}>
-												<IconButton
-													aria-label={list.actionButton.blog.title}
-													onClick={() => redirect(list.actionButton.blog.url)}
-												>
-													<CodeIcon />
-												</IconButton>
-											</Tooltip>
-										) : null}
-									</CardActions>
-								</Card>
-							</Grid>
-						))}
-				</Grid>
-			</div>
-		</React.Fragment>
-	);
-=======
   return (
     <React.Fragment>
       <Toolbar></Toolbar>
@@ -338,5 +255,4 @@ export default function GridList(props) {
       </div>
     </React.Fragment>
   );
->>>>>>> Stashed changes
 }

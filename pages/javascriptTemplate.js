@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Navbar from './components/uiElements/headerBar';
 import GridList from './components/uiElements/gridList';
 import Head from 'next/head';
-import { jsTemplate } from '../data/data';
 
 const useStyles = makeStyles((theme) => ({
 	htmlRoot: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function HTML() {
+export default function HTML(props) {
 	const classes = useStyles();
 
 	return (
@@ -30,8 +29,19 @@ export default function HTML() {
 			</Head>
 			<div className={classes.htmlRoot}>
 				<Navbar heading="JavaScript Projects" />
-				<GridList data={jsTemplate} />
+				<GridList data={props.data} />
 			</div>
 		</React.Fragment>
 	);
+}
+
+export async function getServerSideProps(context) {
+	const res = await fetch(process.env.PROD_ENV + '/api/jstemplate');
+	const data = await res.json();
+
+	return {
+		props: {
+			data: data,
+		},
+	};
 }

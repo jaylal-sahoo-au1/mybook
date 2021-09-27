@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import UAParser from 'ua-parser-js';
 import Navbar from './components/uiElements/headerBar';
 import Questions from './components/uiElements/questions';
-import { htmlQuestion } from '../data/data';
+import { htmlQuestion, cssQuestions } from '../data/data';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
@@ -28,8 +28,8 @@ export default function QuestionsTemplate(props) {
 	const renderQuestion = () => {
 		if (query?.page === 'htmlQuestion') {
 			return htmlQuestion;
-		} else {
-			return [];
+		} else if (query?.page === 'cssQuestion') {
+			return cssQuestions;
 		}
 	};
 
