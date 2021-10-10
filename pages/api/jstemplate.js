@@ -1,11 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import initDB from '../../lib/mongodb';
-import javascripttemplate from '../../models/jstemplate';
+import projects from '../../models/template';
 
 initDB();
 
 export default (req, res) => {
-	javascripttemplate.find().then((data) => {
+	projects.find({ project_type: 'javascript' }).then((data) => {
 		res.status(200).json(data);
 	});
 };

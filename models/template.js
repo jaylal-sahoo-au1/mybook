@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const jstemplateSchema = new mongoose.Schema({
+const templateSchema = new mongoose.Schema({
 	img: {
 		type: 'String',
 		required: false,
@@ -25,7 +25,15 @@ const jstemplateSchema = new mongoose.Schema({
 		type: 'String',
 		required: false,
 	},
+	verify: {
+		type: 'String',
+		required: false,
+	},
+	project_type: {
+		type: 'String',
+		required: false,
+	},
 });
 
-export default mongoose.models.javascripttemplate ||
-	mongoose.model('javascripttemplate', jstemplateSchema);
+export default mongoose.models.project ||
+	mongoose.model('project', templateSchema);
