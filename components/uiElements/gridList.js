@@ -10,6 +10,7 @@ import CardActions from '@material-ui/core/CardActions';
 import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Tooltip from '@material-ui/core/Tooltip';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Image from 'next/image';
 import BookIcon from '@material-ui/icons/Book';
