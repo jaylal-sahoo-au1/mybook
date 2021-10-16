@@ -28,7 +28,7 @@ export default function HTML(props) {
 				<meta name="description" content="JavaScript Projects" />
 			</Head>
 			<div className={classes.htmlRoot}>
-				<Navbar heading="JavaScript Projects" />
+				<Navbar heading="JavaScript Projects" addProject={true} />
 				<GridList data={props.data} />
 			</div>
 		</React.Fragment>

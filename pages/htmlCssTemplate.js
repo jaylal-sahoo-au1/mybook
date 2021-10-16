@@ -22,7 +22,7 @@ export default function HTMLTemplate(props) {
 	const classes = useStyles();
 	return (
 		<div className={classes.htmlRoot}>
-			<Navbar heading="HTML Template" />
+			<Navbar heading="HTML Template" addProject={true} />
 			<GridList data={props.data} />
 		</div>
 	);

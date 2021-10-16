@@ -6,12 +6,13 @@ initDB();
 
 export default function handler(req, res) {
 	if (req.method === 'POST') {
-		htmlcsstemplate
+		projects
 			.create(JSON.parse(req.body))
 			.then((data) => {
 				res.status(200).json({
-					message: 'Post added successfully',
-					success: true,
+					message:
+						'Project Added Successfully. You need to wait 24 hour to verify the project',
+					status: 'success',
 				});
 			})
 			.catch((e) => console.log(e));
